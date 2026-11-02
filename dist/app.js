@@ -30,17 +30,28 @@ document.querySelectorAll(".button, .package-card > a, .nav-cta").forEach((eleme
   );
 });
 
-const contactButton = document.querySelector("[data-contact-button]");
-const contactNote = document.querySelector("[data-contact-note]");
-const contactMessage = "Quero melhorar a presença digital do meu negócio e entender qual pacote faz sentido.";
+const WHATSAPP_NUMBER = "";
+const whatsappLinks = document.querySelectorAll("[data-whatsapp-link]");
+const whatsappToast = document.querySelector("[data-whatsapp-toast]");
+let toastTimer;
 
-contactButton.addEventListener("click", async () => {
-  try {
-    await navigator.clipboard.writeText(contactMessage);
-    contactButton.textContent = "Mensagem copiada";
-    contactNote.textContent = "Agora é só colar no WhatsApp quando o canal estiver conectado.";
-  } catch {
-    contactNote.textContent = contactMessage;
+whatsappLinks.forEach((link) => {
+  const selectedPackage = link.dataset.package;
+  const message = selectedPackage
+    ? `Olá! Quero saber mais sobre o pacote ${selectedPackage}.`
+    : "Olá! Quero melhorar a presença digital do meu negócio e entender qual solução faz sentido.";
+
+  if (WHATSAPP_NUMBER) {
+    link.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+  } else {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      whatsappToast.classList.add("is-visible");
+      window.clearTimeout(toastTimer);
+      toastTimer = window.setTimeout(() => whatsappToast.classList.remove("is-visible"), 3200);
+    });
   }
 });
 
