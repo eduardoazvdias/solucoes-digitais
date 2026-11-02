@@ -19,6 +19,13 @@ const observer = new IntersectionObserver(
 );
 document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
 
+document.querySelectorAll(".button, .package-card > a, .nav-cta").forEach((element) => {
+  element.addEventListener("pointerdown", () => element.classList.add("is-pressed"));
+  ["pointerup", "pointerleave", "pointercancel"].forEach((eventName) =>
+    element.addEventListener(eventName, () => element.classList.remove("is-pressed")),
+  );
+});
+
 const contactButton = document.querySelector("[data-contact-button]");
 const contactNote = document.querySelector("[data-contact-note]");
 const contactMessage = "Quero melhorar a presença digital do meu negócio e entender qual pacote faz sentido.";
