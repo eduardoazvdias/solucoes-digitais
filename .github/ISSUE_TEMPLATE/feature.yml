@@ -1,0 +1,33 @@
+name: Nova entrega
+description: Propor uma entrega ligada a um objetivo ou hipotese
+title: "[Entrega] "
+labels: ["entrega"]
+body:
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Resultado esperado
+      description: O que deve mudar para o usuario ou para o projeto?
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexto e evidencia
+      description: Qual problema, conversa ou dado motivou esta entrega?
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Escopo
+      description: O que entra e o que fica de fora?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Criterios de aceite
+      description: Como verificaremos que a entrega esta pronta?
+    validations:
+      required: true
