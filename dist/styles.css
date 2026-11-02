@@ -695,3 +695,59 @@ h3 { font-size: 1.55rem; }
   .signal-one { left: 4%; }.signal-two { right: 4%; }.signal-three { right: 5%; top: 54%; }
   .package-extras { grid-template-columns: 1fr; gap: 14px; }
 }
+
+/* Compact comparison, NFC/AI demos and section actions */
+.package-card.package-card { min-height: 590px; }
+.package-highlights { flex: 1; padding-top: 17px; }
+.plan-comparison { margin-top: 28px; overflow-x: auto; border: 1px solid rgba(255,255,255,.16); }
+.plan-comparison table { width: 100%; min-width: 720px; border-collapse: collapse; color: white; background: rgba(255,255,255,.035); }
+.plan-comparison th, .plan-comparison td { padding: 13px 16px; border-bottom: 1px solid rgba(255,255,255,.11); text-align: center; font-size: .76rem; }
+.plan-comparison thead th { color: var(--yellow); background: rgba(255,255,255,.06); font-size: .67rem; text-transform: uppercase; letter-spacing: .08em; }
+.plan-comparison th:first-child { width: 34%; text-align: left; }
+.plan-comparison tbody th { color: #d9cfe3; font-weight: 600; }
+.plan-comparison .yes { color: var(--mint); font-size: 1rem; font-weight: 900; }
+.plan-comparison .no { color: #a395b1; font-size: 1rem; }
+.section-cta { display: flex; justify-content: center; margin-top: 28px; }
+.section-cta-left { justify-content: flex-start; margin-top: 20px; }
+.service-mobile-hint { display: none; }
+
+.smart-solutions { color: var(--ink); background: #f4efe7; }
+.smart-solutions .compact-heading { max-width: 760px; }
+.smart-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.smart-card { position: relative; min-height: 430px; display: grid; grid-template-columns: .9fr 1.1fr; gap: 24px; align-items: center; overflow: hidden; padding: 30px; border: 1px solid var(--line); background: #fffdf8; }
+.smart-copy { position: relative; z-index: 2; }
+.smart-copy small { color: var(--violet); font-size: .62rem; font-weight: 800; letter-spacing: .12em; }
+.smart-copy h3 { margin: 13px 0 14px; font-size: 2.25rem; }
+.smart-copy p { color: var(--ink-soft); font-size: .82rem; }
+.smart-copy a { display: inline-flex; gap: 8px; margin-top: 10px; font-size: .75rem; font-weight: 800; text-underline-offset: 5px; }
+.nfc-visual { position: relative; min-height: 290px; }
+.nfc-card { position: absolute; left: 0; top: 48px; z-index: 2; width: 155px; height: 96px; display: flex; justify-content: space-between; align-items: flex-end; padding: 14px; border-radius: 10px; color: white; background: linear-gradient(145deg,#2a1644,#7353e8); box-shadow: 13px 15px 0 var(--mint); transform: rotate(-7deg); animation: nfc-tap 3.8s ease-in-out infinite; }
+.nfc-card b { font-size: .56rem; letter-spacing: .1em; }.nfc-card span { color: var(--yellow); font-size: 1.25rem; }
+.nfc-phone { position: absolute; right: 0; bottom: 0; width: 145px; height: 250px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 17px; border: 7px solid var(--ink); border-radius: 22px; background: white; text-align: center; }
+.nfc-phone i { position: absolute; top: 8px; width: 34px; height: 5px; border-radius: 9px; background: var(--ink); }
+.nfc-phone strong { font-size: .72rem; }.nfc-phone em { margin-top: 10px; color: #e0a400; font-style: normal; letter-spacing: .08em; }
+.ai-demo { background: linear-gradient(145deg,#fffdf8,#eee6f8); }
+.ai-chat { display: flex; flex-direction: column; gap: 8px; padding: 18px; border: 1px solid var(--line); border-radius: 16px; background: white; box-shadow: 0 20px 45px rgba(47,25,86,.12); }
+.chat-label { margin-bottom: 6px; color: var(--violet); font-size: .58rem; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; }
+.ai-chat p { max-width: 88%; margin: 0; padding: 9px 11px; border-radius: 12px; font-size: .66rem; line-height: 1.45; }
+.chat-user { align-self: flex-end; color: white; background: var(--violet); }
+.chat-bot { align-self: flex-start; color: var(--ink); background: #eee8f5; }
+@keyframes nfc-tap { 0%,100% { transform: rotate(-7deg) translate(0,0); } 50% { transform: rotate(-3deg) translate(22px,42px); } }
+
+@media (max-width: 1050px) {
+  .smart-grid { grid-template-columns: 1fr; }
+  .smart-card { min-height: 380px; }
+}
+
+@media (max-width: 760px) {
+  .compact-site .service-card-grid, .compact-site .package-grid { display: flex; gap: 12px; max-width: none; overflow-x: auto; padding: 0 14px 15px; margin-inline: -14px; scroll-snap-type: x mandatory; scrollbar-width: thin; }
+  .compact-site .service-card { flex: 0 0 84%; scroll-snap-align: start; }
+  .compact-site .package-card.package-card { flex: 0 0 88%; min-height: 590px; scroll-snap-align: start; }
+  .service-mobile-hint { display: block; margin: 12px 0 0; color: #bfb2cb; font-size: .68rem; }
+  .plan-comparison { margin-top: 20px; }
+  .plan-comparison th, .plan-comparison td { padding: 11px 12px; }
+  .smart-card { min-height: auto; grid-template-columns: 1fr; padding: 24px; }
+  .smart-copy h3 { font-size: 2rem; }
+  .nfc-visual { min-height: 275px; }
+  .section-cta .button { width: 100%; }
+}
