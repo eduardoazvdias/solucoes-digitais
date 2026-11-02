@@ -9,15 +9,15 @@ Status permitidos: `agora`, `proximo`, `depois`, `bloqueado`, `concluido`.
 - [ ] Preencher o briefing de conteudo.
 - [ ] Definir nome provisório, CTA principal e canal real de atendimento.
 - [ ] Mapear tres a cinco referencias do mesmo publico.
-- [ ] Escrever a primeira arquitetura de conteudo.
-- [ ] Criar wireframe mobile antes da direcao visual final.
+- [x] Escrever a primeira arquitetura de conteudo.
+- [x] Criar uma direcao visual e implementar a primeira pagina responsiva.
 
 ## Proximo
 
 - [ ] Definir identidade visual minima.
-- [ ] Escolher stack tecnica por ADR.
-- [ ] Implementar a pagina institucional.
-- [ ] Preparar um exemplo demonstrativo identificado.
+- [x] Escolher stack tecnica por ADR.
+- [x] Implementar a pagina institucional.
+- [x] Preparar exemplos demonstrativos identificados.
 - [ ] Configurar dominio, metadados e compartilhamento.
 - [ ] Criar checklist de acessibilidade, conteudo e publicacao.
 - [ ] Instrumentar apenas CTA e origem da conversa, se apropriado.

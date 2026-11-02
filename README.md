@@ -6,8 +6,8 @@ O primeiro objetivo e publicar a pagina de apresentacao do proprio negocio. Ela 
 
 ## Estado atual
 
-- Fase: descoberta e definicao da primeira versao
-- Entrega prioritaria: pagina institucional do negocio
+- Fase: primeira pagina institucional implementada para validacao
+- Entrega prioritaria: revisar marca, contato e conteudo antes do lancamento publico
 - Publico inicial: ainda a selecionar e validar
 - Precificacao: fora do escopo da primeira versao
 - Workflow de geracao: documentado como direcao futura, ainda nao implementado
@@ -32,6 +32,12 @@ O primeiro objetivo e publicar a pagina de apresentacao do proprio negocio. Ela 
 - [Workflow futuro de geracao](docs/workflows/site-generation.md)
 - [Hipoteses de validacao](docs/research/hypotheses.md)
 - [Registro de decisoes](docs/decisions/README.md)
+
+## Executar a pagina localmente
+
+A primeira versao e um site estatico em `dist/`. Abra `dist/index.html` diretamente ou sirva a pasta com um servidor HTTP local.
+
+Antes do lancamento publico, substituir o nome provisório, conectar o WhatsApp real e confirmar dominio, identidade e textos.
 
 ## Como trabalhar neste repositorio
 
